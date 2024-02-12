@@ -1,0 +1,41 @@
+- Apache là phần mềm web server miễn phí mã nguồn mở.
+- Đối với Maven chỉ cần khai báo thư viện là có thể dùng được 
+-Tái sử dụng code jsp
+<jsp:include page="header.jsp" /> 		import header.jsp trang động.
+<%@include file="header.jsp" %>			import header.jsp trang tĩnh. 
+
+- Nên sử dụng url để tránh bug
+
+String url = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+		+ request.getContextPath();
+
+./ 		ở thư mục hiện tại
+../		ở thư mục cha
+
+
+- tải thư viện javax.mail và thư viện javax.activation để cài đặt gửi email. Đối với Maven thì không cần thiết tải.	Tìm hiểu về mail. Xác minh bảo mật 2 bước.Sử dụng mật khẩu ứng dụng. (Tài khoản: nguyenvansu511@gmail.com	 Thay thế mật khẩu gmail bằng mật khẩu:  nmebgspdpyfzyvlj
+
+
+- Tải thư viện Commons FileUpload(file zip) và thư viện Commons IO và chỉ cần lấy file jar của mỗi thư viện để  tải file(ảnh) từ server
+	Có nhiều cách upload file:
+	-Cách 1
+	+ Vào form trong HTML thêm thuộc tính enctype="multipart/form-data", method="post"
+	+ Vào file web.xml để sửa cấu hình
+		* <context-param>											Cấu hình thư mục lưu trữ file upload
+  		    <description>Luu tru cac file avatar cua khach hang</description>
+  		    <param-name>avatar</param-name>
+  		    <param-value>
+  			C:\Users\Admin\Desktop\jspservlet2\Bai28_Bookstore_p16_UploadFile\src\main\webapp\WEB-INF	ĐƯờng dẫn cố định, khi triển khai lên server thực tế thì phải cấu hình lại địa chỉ
+  		    </param-value>
+  		  </context-param>
+
+- trang JSP goị trang JSP cần phải đúng đường dẫn truyền link
+- trang JSP goị trang Servlet cần phải đúng đường dẫn truyền link
+- trang HTML gọi trang JSP cần phải đúng đường dẫn truyền link
+- trang HTML goị trang Servlet cần phải đúng đường dẫn truyền link
+- trang Servlet gọi trang JSP  gọi từ thư mục của JSP
+
+
+
+- java.sql.Date	
+	1 lớp mô tả ngày tháng năm. Thông tin về thời gian bị cắt bỏ. Lớp này thường dùng trong JDBC.
