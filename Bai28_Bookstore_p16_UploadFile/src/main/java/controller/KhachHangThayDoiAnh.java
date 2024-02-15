@@ -79,7 +79,7 @@ public class KhachHangThayDoiAnh extends HttpServlet {
 							file = new File(path);
 	
 							fileItem.write(file);
-	
+							// update vao mySQL
 							khachHang.setDuongDanAnh(fileName);
 							KhachHangDAO khachHangDAO = new KhachHangDAO();
 							khachHangDAO.updateImage(khachHang);

@@ -37,5 +37,7 @@ String url = request.getScheme() + "://" + request.getServerName() + ":" + reque
 
 
 
+- form value
+	+ type="check-box". nếu check thì gửi form submit có value = on;. nếu không thì không gửi bất kỳ giá trị nào
 - java.sql.Date	
 	1 lớp mô tả ngày tháng năm. Thông tin về thời gian bị cắt bỏ. Lớp này thường dùng trong JDBC.
