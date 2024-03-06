@@ -1,5 +1,18 @@
+- bit: 01011001
+- 1 byte = 8 bit
+- 1 int = 4 byte = 4 * 8 byte
+- ASCII(mã 7-bit-thông dụng): các ký tự tiêu chuẩn dựa trên chữ cái Latin(số duơng).
+- UTF-8(Unicode Transformation Format – 8 bit-thông dụng) : biểu diễn một loạt các ký tự từ các bảng mã ký tự khác nhau bằng cách sử dụng các dãy byte.
+-Base64.Encoder để mã hóa một mảng byte hoặc String và Base64.Decoder để giải mã một mảng byte được mã hóa base64 hoặc String trong Java 8.
+
 - Apache là phần mềm web server miễn phí mã nguồn mở.
 - Đối với Maven chỉ cần khai báo thư viện là có thể dùng được 
+
+	-MessageDigest md = MessageDigest.getInstance("SHA-1");		sử dụng mã hoá SHA-1	
+	-MessageDigest md = MessageDigest.getInstance("MD5");		sử dụng mã hoá MD5
+	-md.digest(dataBytes);						mã hoá một mảng byte trả về một mảng byte mới(chữ số, có âm, có dương) đã mã hoá
+	10 chữ số(digits) để viết số là: 0, 1, 2, 3, 4, 5, 6, 7, 8 ,9
+
 -Tái sử dụng code jsp
 <jsp:include page="header.jsp" /> 		import header.jsp trang động.
 <%@include file="header.jsp" %>			import header.jsp trang tĩnh. 
@@ -36,7 +49,8 @@ String url = request.getScheme() + "://" + request.getServerName() + ":" + reque
 - trang Servlet gọi trang JSP  gọi từ thư mục của JSP
 
 
-
+- HTML gửi form submit đến Servlet có value của name : String hoặc empty. Nếu không có name thì giá trị bằng null
+- Servlet gửi giá trị(request.setAttribute) có giá trị String hoặc null;	
 - form value
 	+ type="check-box". nếu check thì gửi form submit có value = on;. nếu không thì không gửi bất kỳ giá trị nào
 - java.sql.Date	

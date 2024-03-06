@@ -14,7 +14,7 @@ public class MaHoa {
 		
 		str = str + salt;
 		try {
-			byte[] dataBytes = str.getBytes("UTF-8");
+			byte[] dataBytes = str.getBytes("UTF-8");// chuyển đổi thành một mảng byte
 			MessageDigest md = MessageDigest.getInstance("SHA-1");
 			result = Base64.encodeBase64String(md.digest(dataBytes));
 		} catch (Exception e) {
