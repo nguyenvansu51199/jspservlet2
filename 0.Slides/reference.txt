@@ -1,3 +1,9 @@
+- tạo project là dynamic project
+- tạo file servlet
+- tạo file jsp ngang cấp với file web-inf
+- web browser: runtime trên chcrom hay mặc định
+
+
 - bit: 01011001
 - 1 byte = 8 bit
 - 1 int = 4 byte = 4 * 8 byte
